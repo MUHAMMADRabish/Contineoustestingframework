@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Adhoc]" guice-stage="DEVELOPMENT">
+  <parameter name="URI" value="https://reqres.in/api/users?page=2"/>
+  <listeners>
+    <listener class-name="listners.listner"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Function(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="Automation.HOmeScnariosAutomation">
+        <methods>
+          <include name="browsers"/>
+          <include name="CreateTheAccount"/>
+          <include name="Afterclass"/>
+        </methods>
+      </class> <!-- Automation.HOmeScnariosAutomation -->
+    </classes>
+  </test> <!-- Function(failed) -->
+</suite> <!-- Failed suite [Adhoc] -->
